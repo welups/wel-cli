@@ -1,6 +1,6 @@
 {
   "name": "@welups/wel-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "bin": {
     "wel-cli": "bin/index.js"
@@ -8,8 +8,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Trucdev <trucdev@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:welups/wel-cli.git"
+  },
   "dependencies": {
     "@tronscan/client": "github:clownsss/tronscan-node-client#v2.2.42",
     "cli-progress": "^3.9.1",
@@ -21,5 +25,13 @@
   "devDependencies": {
     "mocha": "^5.2.0"
   },
-  "description": ""
+  "description": "CLI for welups blokchain",
+  "keywords": [
+    "WEL",
+    "WELUPS",
+    "Blockchain",
+    "WALLET",
+    "WITNESS",
+    "VOTE"
+  ]
 }
