@@ -6,7 +6,7 @@ const questions = [
   {
     type: "rawlist",
     name: "network",
-    message: "What's command you want to run?",
+    message: "What's network you want to work with?",
     choices: [
       {
         name: "Main net",
@@ -15,6 +15,10 @@ const questions = [
       {
         name: "Test net",
         value: "TestNet",
+      },
+      {
+        name: "Dev net",
+        value: "DevNet",
       },
     ],
   },
@@ -30,6 +34,10 @@ const questions = [
       {
         name: "Witness set brokerage",
         value: "set.brokerage",
+      },
+      {
+        name: "Approve proposal",
+        value: "approve.proposal",
       },
     ],
   },
