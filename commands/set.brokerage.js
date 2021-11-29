@@ -2,9 +2,8 @@ const inquirer = require("inquirer");
 const crypto = require("@tronscan/client/src/utils/crypto");
 const { addressToHex } = require("../utils/address");
 const stringToHex = require("string-hex");
-const { getTransactionSign } = require("../helpers/apis");
-const { broadcastTransaction } = require("../helpers/apis");
-const { updateAccount } = require("../apis/info");
+const { signAndBroadcast } = require("../helpers/apis");
+const { updateBrokerage } = require("./../apis/witness");
 
 const questions = [
   {
@@ -13,30 +12,26 @@ const questions = [
     message: "What's owner private key:",
   },
   {
-    type: "input",
-    name: "name",
-    message: "Name of account",
+    type: "number",
+    name: "brokerage",
+    message: "Brokerage",
   },
 ];
 
 const runner = async () => {
   try {
-    const { privateKey, name } = await inquirer.prompt(questions);
+    const { privateKey, brokerage } = await inquirer.prompt(questions);
 
     const owner = crypto.pkToAddress(privateKey);
     const owner_address = owner.startsWith("41") ? owner : addressToHex(owner);
 
-    const transaction = await updateAccount({
+    const transaction = await updateBrokerage({
       owner_address,
-      account_name: stringToHex(name),
+      brokerage,
     });
 
-    const sign = await getTransactionSign({
-      transaction,
-      privateKey,
-    });
-
-    await broadcastTransaction(sign);
+    const result = await signAndBroadcast(transaction, privateKey);
+    console.log(result);
 
     return process.exit();
   } catch (error) {

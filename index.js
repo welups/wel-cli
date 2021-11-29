@@ -28,8 +28,8 @@ const questions = [
         value: "set.account.name",
       },
       {
-        name: "Transfer WEL",
-        value: "Transfer WEL",
+        name: "Witness set brokerage",
+        value: "set.brokerage",
       },
     ],
   },

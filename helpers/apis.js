@@ -8,7 +8,6 @@ const broadcastTransaction = async ({ visible, ...signedTransaction }) => {
       signedTransaction
     )
     .then((res) => {
-      console.log(res.data);
       return res.data;
     });
 };
@@ -46,7 +45,6 @@ const signAndBroadcast = async (transaction, privateKey) => {
     transaction,
     privateKey,
   });
-  console.log("sign", sign);
   return broadcastTransaction(sign);
 };
 
