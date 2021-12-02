@@ -28,6 +28,10 @@ const questions = [
     message: "What's command you want to run?",
     choices: [
       {
+        name: "Generate random wallet",
+        value: "generate.wallet",
+      },
+      {
         name: "Set account name",
         value: "set.account.name",
       },
