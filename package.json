@@ -21,7 +21,10 @@
     "dotenv": "^10.0.0",
     "ethereum-checksum-address": "^0.0.7",
     "inquirer": "^8.2.0",
-    "string-hex": "^1.0.0"
+    "inquirer-file-path": "^1.0.1",
+    "inquirer-path": "^1.0.0-beta5",
+    "string-hex": "^1.0.0",
+    "web3": "^1.6.1"
   },
   "devDependencies": {
     "mocha": "^5.2.0"

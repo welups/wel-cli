@@ -43,6 +43,10 @@ const questions = [
         name: "Approve proposal",
         value: "approve.proposal",
       },
+      {
+        name: "Create keystore",
+        value: "create-keystore",
+      },
     ],
   },
 ];
